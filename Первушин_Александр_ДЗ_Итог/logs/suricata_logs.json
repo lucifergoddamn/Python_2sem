@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": "2024-01-15 10:30:25",
+    "src_ip": "192.168.1.100",
+    "dst_ip": "45.33.22.11",
+    "alert": "ET MALWARE Known malicious IP",
+    "severity": 1,
+    "protocol": "TCP"
+  },
+  {
+    "timestamp": "2024-01-15 10:32:10",
+    "src_ip": "192.168.1.105",
+    "dst_ip": "8.8.8.8",
+    "alert": "ET DNS Query for suspicious domain",
+    "severity": 2,
+    "protocol": "DNS"
+  },
+  {
+    "timestamp": "2024-01-15 10:35:42",
+    "src_ip": "192.168.1.110",
+    "dst_ip": "185.130.5.23",
+    "alert": "ET TROJAN Possible C2 Communication",
+    "severity": 1,
+    "protocol": "HTTP"
+  },
+  {
+    "timestamp": "2024-01-15 10:40:15",
+    "src_ip": "192.168.1.120",
+    "dst_ip": "104.16.85.20",
+    "alert": "ET POLICY Suspicious DNS Query",
+    "severity": 2,
+    "protocol": "DNS"
+  },
+  {
+    "timestamp": "2024-01-15 10:45:30",
+    "src_ip": "192.168.1.130",
+    "dst_ip": "31.13.79.246",
+    "alert": "ET MALWARE Known malicious domain",
+    "severity": 1,
+    "protocol": "HTTPS"
+  },
+  {
+    "timestamp": "2024-01-15 10:50:22",
+    "src_ip": "192.168.1.140",
+    "dst_ip": "185.130.5.23",
+    "alert": "ET MALWARE Repeated connection to malicious IP",
+    "severity": 1,
+    "protocol": "TCP"
+  },
+  {
+    "timestamp": "2024-01-15 10:55:18",
+    "src_ip": "192.168.1.150",
+    "dst_ip": "8.8.4.4",
+    "alert": "ET DNS Large number of queries",
+    "severity": 2,
+    "protocol": "DNS"
+  },
+  {
+    "timestamp": "2024-01-15 11:00:05",
+    "src_ip": "192.168.1.160",
+    "dst_ip": "5.45.76.89",
+    "alert": "ET ATTACK Possible brute force attempt",
+    "severity": 1,
+    "protocol": "SSH"
+  },
+  {
+    "timestamp": "2024-01-15 11:05:30",
+    "src_ip": "192.168.1.170",
+    "dst_ip": "91.215.140.22",
+    "alert": "ET MALWARE Cobalt Strike beacon detected",
+    "severity": 1,
+    "protocol": "HTTP"
+  }
+]

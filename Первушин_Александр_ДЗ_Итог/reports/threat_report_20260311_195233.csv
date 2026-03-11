@@ -1,0 +1,19 @@
+type,source,details,ip,src_ip,protocol,timestamp,severity,count,malicious_count,suspicious_count,detections,pulse_name,threat_score,tags,malware_families,indicators,indicator,indicator_type
+High Severity Alert,Suricata,ET MALWARE Known malicious IP,45.33.22.11,192.168.1.100,TCP,2024-01-15 10:30:25,HIGH,,,,,,,,,,,
+High Severity Alert,Suricata,ET TROJAN Possible C2 Communication,185.130.5.23,192.168.1.110,HTTP,2024-01-15 10:35:42,HIGH,,,,,,,,,,,
+High Severity Alert,Suricata,ET MALWARE Known malicious domain,31.13.79.246,192.168.1.130,HTTPS,2024-01-15 10:45:30,HIGH,,,,,,,,,,,
+High Severity Alert,Suricata,ET MALWARE Repeated connection to malicious IP,185.130.5.23,192.168.1.140,TCP,2024-01-15 10:50:22,HIGH,,,,,,,,,,,
+High Severity Alert,Suricata,ET ATTACK Possible brute force attempt,5.45.76.89,192.168.1.160,SSH,2024-01-15 11:00:05,HIGH,,,,,,,,,,,
+High Severity Alert,Suricata,ET MALWARE Cobalt Strike beacon detected,91.215.140.22,192.168.1.170,HTTP,2024-01-15 11:05:30,HIGH,,,,,,,,,,,
+Repeated Connections,Suricata,IP 185.130.5.23 получил 2 подключений,185.130.5.23,,,,MEDIUM,2.0,,,,,,,,,,
+Malicious Object Detected,VirusTotal,Обнаружено 5 вредоносных детектов,,,,,CRITICAL,,5.0,3.0,"['Trojan.Generic', 'BackDoor', 'Win32:Malware-gen']",,,,,,,
+Threat Intelligence,AlienVault OTX,"Обнаружена новая кампария ransomware, targeting Russian organizations",,,,,CRITICAL,,,,,Активная кампания шифровальщиков,85.0,"['ransomware', 'c2', 'phishing']","['LockBit', 'BlackCat']","[{'type': 'IPv4', 'value': '185.130.5.23', 'description': 'C2 Server'}, {'type': 'domain', 'value': 'evil-update.ru', 'description': 'Malicious domain'}, {'type': 'URL', 'value': 'http://evil-update.ru/payload.exe', 'description': 'Malware download'}]",,
+IoC - IPv4,AlienVault OTX,C2 Server,,,,,HIGH,,,,,,,,,,185.130.5.23,IPv4
+IoC - domain,AlienVault OTX,Malicious domain,,,,,HIGH,,,,,,,,,,evil-update.ru,domain
+IoC - URL,AlienVault OTX,Malware download,,,,,HIGH,,,,,,,,,,http://evil-update.ru/payload.exe,URL
+Threat Intelligence,AlienVault OTX,Massive phishing campaign targeting Russian banking customers,,,,,HIGH,,,,,Фишинговая атака на банки,75.0,"['phishing', 'banking', 'credential-theft']","['Zeus', 'TrickBot']","[{'type': 'domain', 'value': 'secure-bank24.ru', 'description': 'Phishing site'}, {'type': 'email', 'value': 'support@secure-bank24.ru', 'description': 'Phishing email'}]",,
+IoC - domain,AlienVault OTX,Phishing site,,,,,HIGH,,,,,,,,,,secure-bank24.ru,domain
+IoC - email,AlienVault OTX,Phishing email,,,,,HIGH,,,,,,,,,,support@secure-bank24.ru,email
+Threat Intelligence,AlienVault OTX,New Mirai variant targeting IoT devices in Russia,,,,,HIGH,,,,,DDoS ботнет активность,60.0,"['ddos', 'botnet', 'iot']","['Mirai', 'Gafgyt']","[{'type': 'IPv4', 'value': '45.33.22.11', 'description': 'C2 Server'}, {'type': 'IPv4', 'value': '104.16.85.20', 'description': 'Scanning source'}]",,
+IoC - IPv4,AlienVault OTX,C2 Server,,,,,HIGH,,,,,,,,,,45.33.22.11,IPv4
+IoC - IPv4,AlienVault OTX,Scanning source,,,,,HIGH,,,,,,,,,,104.16.85.20,IPv4

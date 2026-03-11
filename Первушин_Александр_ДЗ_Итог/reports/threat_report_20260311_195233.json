@@ -1,0 +1,271 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-11T19:52:33.202744",
+    "total_threats": 18,
+    "sources_analyzed": {
+      "suricata_logs": 9,
+      "api_calls": 2
+    }
+  },
+  "threats": [
+    {
+      "type": "High Severity Alert",
+      "source": "Suricata",
+      "details": "ET MALWARE Known malicious IP",
+      "ip": "45.33.22.11",
+      "src_ip": "192.168.1.100",
+      "protocol": "TCP",
+      "timestamp": "2024-01-15 10:30:25",
+      "severity": "HIGH"
+    },
+    {
+      "type": "High Severity Alert",
+      "source": "Suricata",
+      "details": "ET TROJAN Possible C2 Communication",
+      "ip": "185.130.5.23",
+      "src_ip": "192.168.1.110",
+      "protocol": "HTTP",
+      "timestamp": "2024-01-15 10:35:42",
+      "severity": "HIGH"
+    },
+    {
+      "type": "High Severity Alert",
+      "source": "Suricata",
+      "details": "ET MALWARE Known malicious domain",
+      "ip": "31.13.79.246",
+      "src_ip": "192.168.1.130",
+      "protocol": "HTTPS",
+      "timestamp": "2024-01-15 10:45:30",
+      "severity": "HIGH"
+    },
+    {
+      "type": "High Severity Alert",
+      "source": "Suricata",
+      "details": "ET MALWARE Repeated connection to malicious IP",
+      "ip": "185.130.5.23",
+      "src_ip": "192.168.1.140",
+      "protocol": "TCP",
+      "timestamp": "2024-01-15 10:50:22",
+      "severity": "HIGH"
+    },
+    {
+      "type": "High Severity Alert",
+      "source": "Suricata",
+      "details": "ET ATTACK Possible brute force attempt",
+      "ip": "5.45.76.89",
+      "src_ip": "192.168.1.160",
+      "protocol": "SSH",
+      "timestamp": "2024-01-15 11:00:05",
+      "severity": "HIGH"
+    },
+    {
+      "type": "High Severity Alert",
+      "source": "Suricata",
+      "details": "ET MALWARE Cobalt Strike beacon detected",
+      "ip": "91.215.140.22",
+      "src_ip": "192.168.1.170",
+      "protocol": "HTTP",
+      "timestamp": "2024-01-15 11:05:30",
+      "severity": "HIGH"
+    },
+    {
+      "type": "Repeated Connections",
+      "source": "Suricata",
+      "details": "IP 185.130.5.23 получил 2 подключений",
+      "ip": "185.130.5.23",
+      "count": 2,
+      "severity": "MEDIUM"
+    },
+    {
+      "type": "Malicious Object Detected",
+      "source": "VirusTotal",
+      "details": "Обнаружено 5 вредоносных детектов",
+      "malicious_count": 5,
+      "suspicious_count": 3,
+      "detections": [
+        "Trojan.Generic",
+        "BackDoor",
+        "Win32:Malware-gen"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "type": "Threat Intelligence",
+      "source": "AlienVault OTX",
+      "details": "Обнаружена новая кампария ransomware, targeting Russian organizations",
+      "pulse_name": "Активная кампания шифровальщиков",
+      "threat_score": 85,
+      "tags": [
+        "ransomware",
+        "c2",
+        "phishing"
+      ],
+      "malware_families": [
+        "LockBit",
+        "BlackCat"
+      ],
+      "indicators": [
+        {
+          "type": "IPv4",
+          "value": "185.130.5.23",
+          "description": "C2 Server"
+        },
+        {
+          "type": "domain",
+          "value": "evil-update.ru",
+          "description": "Malicious domain"
+        },
+        {
+          "type": "URL",
+          "value": "http://evil-update.ru/payload.exe",
+          "description": "Malware download"
+        }
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "type": "IoC - IPv4",
+      "source": "AlienVault OTX",
+      "details": "C2 Server",
+      "indicator": "185.130.5.23",
+      "indicator_type": "IPv4",
+      "severity": "HIGH"
+    },
+    {
+      "type": "IoC - domain",
+      "source": "AlienVault OTX",
+      "details": "Malicious domain",
+      "indicator": "evil-update.ru",
+      "indicator_type": "domain",
+      "severity": "HIGH"
+    },
+    {
+      "type": "IoC - URL",
+      "source": "AlienVault OTX",
+      "details": "Malware download",
+      "indicator": "http://evil-update.ru/payload.exe",
+      "indicator_type": "URL",
+      "severity": "HIGH"
+    },
+    {
+      "type": "Threat Intelligence",
+      "source": "AlienVault OTX",
+      "details": "Massive phishing campaign targeting Russian banking customers",
+      "pulse_name": "Фишинговая атака на банки",
+      "threat_score": 75,
+      "tags": [
+        "phishing",
+        "banking",
+        "credential-theft"
+      ],
+      "malware_families": [
+        "Zeus",
+        "TrickBot"
+      ],
+      "indicators": [
+        {
+          "type": "domain",
+          "value": "secure-bank24.ru",
+          "description": "Phishing site"
+        },
+        {
+          "type": "email",
+          "value": "support@secure-bank24.ru",
+          "description": "Phishing email"
+        }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "IoC - domain",
+      "source": "AlienVault OTX",
+      "details": "Phishing site",
+      "indicator": "secure-bank24.ru",
+      "indicator_type": "domain",
+      "severity": "HIGH"
+    },
+    {
+      "type": "IoC - email",
+      "source": "AlienVault OTX",
+      "details": "Phishing email",
+      "indicator": "support@secure-bank24.ru",
+      "indicator_type": "email",
+      "severity": "HIGH"
+    },
+    {
+      "type": "Threat Intelligence",
+      "source": "AlienVault OTX",
+      "details": "New Mirai variant targeting IoT devices in Russia",
+      "pulse_name": "DDoS ботнет активность",
+      "threat_score": 60,
+      "tags": [
+        "ddos",
+        "botnet",
+        "iot"
+      ],
+      "malware_families": [
+        "Mirai",
+        "Gafgyt"
+      ],
+      "indicators": [
+        {
+          "type": "IPv4",
+          "value": "45.33.22.11",
+          "description": "C2 Server"
+        },
+        {
+          "type": "IPv4",
+          "value": "104.16.85.20",
+          "description": "Scanning source"
+        }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "type": "IoC - IPv4",
+      "source": "AlienVault OTX",
+      "details": "C2 Server",
+      "indicator": "45.33.22.11",
+      "indicator_type": "IPv4",
+      "severity": "HIGH"
+    },
+    {
+      "type": "IoC - IPv4",
+      "source": "AlienVault OTX",
+      "details": "Scanning source",
+      "indicator": "104.16.85.20",
+      "indicator_type": "IPv4",
+      "severity": "HIGH"
+    }
+  ],
+  "statistics": {
+    "by_severity": {
+      "HIGH": 15,
+      "MEDIUM": 1,
+      "CRITICAL": 2
+    },
+    "by_source": {
+      "Suricata": 7,
+      "VirusTotal": 1,
+      "AlienVault OTX": 10
+    },
+    "by_type": {
+      "High Severity Alert": 6,
+      "Repeated Connections": 1,
+      "Malicious Object Detected": 1,
+      "Threat Intelligence": 3,
+      "IoC - IPv4": 3,
+      "IoC - domain": 2,
+      "IoC - URL": 1,
+      "IoC - email": 1
+    },
+    "unique_ips": [
+      "45.33.22.11",
+      "5.45.76.89",
+      "185.130.5.23",
+      "31.13.79.246",
+      "91.215.140.22"
+    ],
+    "total_unique_ips": 5
+  }
+}
